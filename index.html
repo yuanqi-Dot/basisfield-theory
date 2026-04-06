@@ -255,7 +255,10 @@
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const section = link.getAttribute('data-section');
-            if (section) showSection(section);
+            if (section) {
+                e.preventDefault();
+                showSection(section);
+            }
         });
     });
     // 默认显示首页（已处理）
